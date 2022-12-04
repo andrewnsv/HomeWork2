@@ -51,10 +51,19 @@ const b = 2;
 const c = 3; 
 const d = 3;
 
+const one = (a < c) && (c > b);
+const two = (b < c) && (c === c);
+const three = (c === c) && (c === d);
+
+const resOne = one || two || three;
+const resTwo = one && two && three;
+
+console.log(resOne,resTwo)
+
 //8  Простой пример демонстрирующий различая между == и ===
 
-console.log('3' == 3); //true
-console.log('3' === 3); //false
+console.log('Нестрогое сравнение ' + ('3' == 3)); //true
+console.log('Строгое сравнение ' + ('3' === 3)); //false
 
 //9 Gродемонстрируйте работу оператора ??
 
